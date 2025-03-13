@@ -2,14 +2,17 @@
 const { image, navn, rolle } = Astro.props;
 ---
 
-<article>
-  <img src={image} alt="" />
+<article class="card">
+  <img src={image} alt="{navn}" />
   <h3>{navn}</h3>
   <p>{rolle}</p>
 </article>
 
 <style>
-  .card {
-    border-radius: 100px;
+  .card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
   }
 </style>
