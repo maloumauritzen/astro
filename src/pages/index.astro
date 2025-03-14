@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Header from "../components/header.astro";
+import PlaylistCard from "../components/PlaylistCard.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -8,45 +10,91 @@ import Card from "../components/Card.astro";
 
 <Layout>
   <main>
-    <h1>Populære kunstnere</h1>
-    <section class="popular_artists">
-      <Card
-        image="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill"
-        navn="Miley Cyrus"
-        rolle="Kunstner"
-      />
-      <Card
-        image="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill"
-        navn="Bentley"
-        rolle="Kunstner"
-      />
-      <Card
-        image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill"
-        navn="Rihanna"
-        rolle="Kunstner"
-      />
-      <Card
-        image="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill"
-        navn="Jay-Z"
-        rolle="Kunstner"
-      />
-      <Card
-        image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill"
-        navn="The Black Eyed Peas"
-        rolle="Kunstner"
-      />
+    <Header />
+    <section class="main-group">
+      <h2>Populære kunstnere</h2>
+
+      <section class="popular_artists">
+        <Card
+          image="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill"
+          navn="Miley Cyrus"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill"
+          navn="Bentley"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill"
+          navn="Rihanna"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill"
+          navn="Jay-Z"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill"
+          navn="The Black Eyed Peas"
+          rolle="Kunstner"
+        />
+      </section>
+      <h2>Populære Playlister</h2>
+      <section class="playlist_card">
+        <PlaylistCard
+          image="https://picsum.photos/id/65/150/150"
+          navn="Sommerlig Musik"
+          rolle="Relax and indulge with beautiful music"
+        />
+        <PlaylistCard
+          image="https://fastly.picsum.photos/id/68/150/150.jpg?hmac=th8Hnl1ahVopCkGnhzg0jTjXaDdKERDxRjFtPxBDABA"
+          navn="Moody Dage"
+          rolle="For days with tears"
+        />
+        <PlaylistCard
+          image="https://fastly.picsum.photos/id/334/150/150.jpg?hmac=Qvuco0o6vK-124Ocxhg8VwMCEN7otJpxtlPy_BwWjeQ"
+          navn="Calming Musik"
+          rolle="For a chill day at home"
+        />
+        <PlaylistCard
+          image="https://fastly.picsum.photos/id/76/150/150.jpg?hmac=s6UjGsYCF9dUT5dJOmmxGCkE3nhucdJQK7GvrwHPxIE"
+          navn="Lounge Musik"
+          rolle="Behagelig og rar baggrundsmusik"
+        />
+        <PlaylistCard
+          image="https://fastly.picsum.photos/id/364/150/150.jpg?hmac=YfnTs5uh8Q9y-RPqkiM1a4S8cC90xfFHyDrBqRxeqHM"
+          navn="Rejse Musik"
+          rolle="Alle de gode gamle klassikere"
+        />
+      </section>
+
+      <style>
+        main {
+          max-width: 1275px;
+        }
+        .popular_artists {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          color: white;
+          gap: 20px;
+        }
+        .playlist_card {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          color: white;
+          gap: 20px;
+        }
+        .main-group {
+          background: linear-gradient(to bottom, #2f2f2f, #171717);
+          padding: 20px;
+        }
+
+        h2 {
+          color: white;
+        }
+      </style>
     </section>
   </main>
-
-  <style>
-    main {
-      max-width: 1000px;
-    }
-    .popular_artists {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      color: white;
-      background-color: rgb(29, 29, 29);
-    }
-  </style>
 </Layout>
