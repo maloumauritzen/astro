@@ -1,0 +1,21 @@
+---
+const { image, navn, rolle } = Astro.props;
+---
+
+<article class="playlist_card">
+  <img src={image} alt="{navn}" />
+  <h3>{navn}</h3>
+  <p>{rolle}</p>
+</article>
+
+<style>
+  .playlist_card img {
+    border-radius: 5%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  p {
+    color: rgb(197, 197, 197);
+  }
+</style>

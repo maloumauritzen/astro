@@ -1,0 +1,41 @@
+<header>
+  <div class="button_group">
+    <div class="btn1">Sign Up</div>
+    <div class="btn2">Log In</div>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: flex-end; /* Placerer indholdet i højre side */
+    padding: 1rem; /* Giver lidt afstand fra kanten */
+    width: 100%; /* Sikrer at header fylder hele bredden */
+    position: absolute; /* Eller fixed hvis du vil have det fast */
+    top: 0;
+    right: 0;
+  }
+
+  .button_group {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn1 {
+    color: rgb(177, 177, 177);
+    font-weight: 800;
+    padding: 15px;
+  }
+
+  .btn1:hover {
+    color: white;
+  }
+
+  .btn2 {
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    padding: 17px 25px 17px 25px;
+    font-weight: 800;
+  }
+</style>
